@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package ventas;
+
+option go_package = "/ventas";
+
+
+service OrderProcessing {
+    rpc ProcessOrder (OrderRequest) returns (OrderResponse);
+}
+
+message OrderRequest {
+    repeated Product products = 1;
+    Client customer = 2;
+}
+
+message OrderResponse {
+    string message = 1;
+}
+
+
+message Product {
+  string title = 1;
+  string author = 2;
+  string genre = 3;
+  int32 pages = 4;
+  string publication = 5;
+  int32 quantity = 6;
+  float price = 7;
+}
+
+message Location {
+  string address1 = 1;
+  string address2 = 2;
+  string city = 3;
+  string state = 4;
+  string postalCode = 5;
+  string country = 6;
+}
+
+message Client {
+  string name = 1;
+  string lastname = 2;
+  string email = 3;
+  string phone = 4;
+  Location location = 5;
+}

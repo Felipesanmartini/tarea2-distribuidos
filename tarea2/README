@@ -1,0 +1,38 @@
+Entrega Tarea 2, Sistemas Distribuidos. Grupo 14
+- Felipe San Martín
+- Joanna Da Silva
+
+
+
+IMPORTANTE:
+- Hay que levantar previamente el servidor de RabbitMQ, localmente en ubuntu.
+- La coneccion a la base de datos deberia funcionar desde cualquier IP, sabemos
+    que es inseguro pero considerando el contexto de la tarea y de la entrega, es
+    lo que nosotros implementamos.
+
+
+
+Para ejecutar codigo, ejecutar en el siguiente orden:
+- Para ejecutar despacho.go, inventario.go y notificacion.go
+    $ cd path_3
+    $ go run despacho.go
+    $ go run inventario.go
+    $ go run notificacion.go
+
+- Para ejecutar ventas.go:
+    $ cd path_2
+    $ go run ventas.go
+
+- Para ejecutar cliente.go y leer products.json:
+    $ cd path_1
+    $ go run cliente.go products.json
+
+Para actualizar dependencias (mod.go):
+    $ go mod tidy
+
+- En caso de tener que reiniciar el modulo de Go:
+    - Dentro de la carpeta tarea2 ($ cd tarea2):
+
+    $ go mod init example.com/m/tarea2
+    $ go mod tidy
+
